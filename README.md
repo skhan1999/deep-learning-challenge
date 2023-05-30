@@ -1,10 +1,10 @@
 # deep-learning-challenge
 
-### Overview of the analysis
+## Overview of the analysis
 
 This analysis used a real world dataset containing data from more than 35000 organizations, funded by Alphabet Soup in the past. With the help of this data, the aim of the analysis is to create a deep learning neural network model to predict the success/failure of the future funds.
 
-### Results
+## Results
 
 Data Preprocessing
 The 'IS_SUCCESSFUL' column is target of this model.
@@ -21,7 +21,7 @@ What steps did you take in your attempts to increase model performance?
 
 Three different attempts were made to optimize the model:
 
-# Attempt #1
+#### Attempt #1
 
 Number of epoches was increased to 150 from 100.
 A new hidden layer was added with 60 neurons.
@@ -29,25 +29,25 @@ Binning structure of 'CLASSIFICATION' column has changed.
 More neurons were added to hidden layers.
 Results : 72.44% accuracy (worse) / 59.79% loss (worse)
 
-# Attempt #2
+#### Attempt #2
 
 Two more variables were dropped ('STATUS' and 'SPECIAL_CONSIDERATION').
 Binning structures of 'APPLICATION_TYPE' and 'CLASSIFICATION' variables have been changed.
 A new hidden layer was added with 60 neurons.
 Results : 72.60% accuracy (worse) / 57.90% loss (worse)
 
-# Attempt #3
+#### Attempt #3
 
 Two more dense layers were added.
 Results : 73.01% accuracy (better) / 55.82% loss (better)
 
-# Attempt #4
+#### Attempt #4
 
 'NAME' column was kept.
 6 more dense layers were added.
 Binning structures of 'APPLICATION_TYPE' and 'CLASSIFICATION' and 'NAME' and variables have been changed.
 Results : 78.26% accuracy (best) / 53.68% loss (better)
 
-### Summary
+## Summary
 
 None of the optimization attempts had achieved noticable increase in accuracy, instead some of them cause to increase in loss. Since there are a lot of categorical data in the dataset, decision trees and random forrest methods got better results. Overally the attempt 4 had a little bit of positive influence on the model's performance. 
